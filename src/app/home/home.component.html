@@ -1,4 +1,4 @@
-<h1>Welcome to Mega Chat</h1>
+<h1>Welcome to fire-chat</h1>
 
 <div class="login">
   <div *ngIf=" auth.user$ | async as user; else login">
@@ -12,7 +12,6 @@
     <button class="button is-small" (click)="auth.signOut()">Sign Out</button>
     <hr>
 
-    <button class="button" routerLink="/chats/UJrR0M10IK7VJDVCQIKF">Join Mega Chat 🎪</button>
     <button class="button is-info" (click)="cs.create()">Create New Chat</button>
 
     <hr>

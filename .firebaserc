@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "instafire-app"
+    "default": "fire-chat"
   },
   "targets": {
-    "instafire-app": {
+    "fire-chat": {
       "hosting": {
-        "megachat": [
-          "firestore-megachat"
+        "fire-chat": [
+          "fire-chat"
         ]
       }
     }

@@ -11,21 +11,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-// Instructions ---->
-// Replace configPlaceholder with environment.firebase
-// import { environment } from '../environments/environment';
-// import configPlaceholder from './env';
+import { environment } from '../environments/environment'
 import { ChatComponent } from './chat/chat.component';
 import { HomeComponent } from './home/home.component';
-
-const config = {
-  apiKey: 'AIzaSyCLXaUcLfhz2RH8Dz6gESgRfMS0mQYzOhc',
-  authDomain: 'instafire-app.firebaseapp.com',
-  databaseURL: 'https://instafire-app.firebaseio.com',
-  projectId: 'instafire-app',
-  storageBucket: 'instafire-app.appspot.com',
-  messagingSenderId: '349272671197'
-};
 
 @NgModule({
   declarations: [AppComponent, ChatComponent, HomeComponent],
@@ -34,7 +22,7 @@ const config = {
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireModule.initializeApp(config),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
